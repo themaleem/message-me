@@ -1,0 +1,17 @@
+<%= form_with(model: @user,class:"ui form", local: true) do |f| %>
+    
+    <div class="field">
+        <%= f.label :username %>
+        <%= f.text_field :username, placeholder: "Enter username" %>        
+    </div>
+
+    <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "Password goes here" %>    
+    </div>
+    
+    <div class="middle aligned column">
+        <%= f.submit(@user.new_record? ? "Sign up" : "Update account",class:"ui green big button") %>
+      </div>
+    </div>
+<% end %>
